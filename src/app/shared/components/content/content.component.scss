@@ -1,0 +1,11 @@
+.Content {
+  min-height: 100vh;
+
+  &-body {
+    flex-grow: 1;
+  }
+
+  &--hasToolbar {
+    min-height: calc(100vh - 56px);
+  }
+}
