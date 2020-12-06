@@ -1,9 +1,8 @@
-import { Component, Vue } from 'vue-property-decorator';
+import { defineComponent } from '@vue/composition-api';
 
-@Component({
+export default defineComponent({
   metaInfo: {
     title: 'Home',
     titleTemplate: '%s — COVID19',
   },
-})
-export default class App extends Vue {}
+});
