@@ -5,7 +5,7 @@ const landingRoutes: RouteConfig[] = [
     path: '/',
     name: 'Landing',
     component: () =>
-      import(/* webpackChunkName: "not-found" */ './landing.component.vue'),
+      import(/* webpackChunkName: "landing" */ './landing.component.vue'),
   },
 ];
 
