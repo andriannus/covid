@@ -14,6 +14,14 @@ const generalRoutes: RouteConfig[] = [
         component: () =>
           import(/* webpackChunkName: "about" */ './about/about.component.vue'),
       },
+      {
+        path: '*',
+        name: 'NotFound',
+        component: () =>
+          import(
+            /* webpackChunkName: "not-found" */ './not-found/not-found.component.vue'
+          ),
+      },
     ],
   },
 ];
