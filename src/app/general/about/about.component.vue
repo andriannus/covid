@@ -1,5 +1,5 @@
 <template>
-  <app-content :has-toolbar="false">
+  <app-content :has-top-bar="false" padding="base">
     <app-card>
       <h1 class="FontSize-large FontWeight-medium">Tentang aplikasi ini</h1>
 
@@ -35,10 +35,7 @@
     </app-card>
 
     <template #contentFooter>
-      <router-link
-        class="Button Button--primary Button--outlined Button--fullWidth"
-        to="/"
-      >
+      <router-link class="Button Button--primary Button--fullWidth" to="/">
         Beranda
       </router-link>
     </template>

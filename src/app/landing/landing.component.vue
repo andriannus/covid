@@ -5,14 +5,14 @@
     <app-page>
       <app-content>
         <template #contentHeader>
-          <app-card>
+          <app-card :borderless="true" :radiusless="true">
             <div class="TextAlign-center">
               <h1 class="FontSize-2xlarge">Virus Corona (COVID-19)</h1>
             </div>
           </app-card>
         </template>
 
-        <app-card>
+        <app-card :borderless="true" :radiusless="true">
           <h2 class="FontWeight-medium FontSize-xlarge MarginBottom">
             Indonesia
           </h2>

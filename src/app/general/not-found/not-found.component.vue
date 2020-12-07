@@ -1,5 +1,5 @@
 <template>
-  <app-content :has-toolbar="false">
+  <app-content :has-top-bar="false" padding="base">
     <app-card>
       <app-icon class="MarginBottom" icon="exclamation" size="3x"></app-icon>
 
@@ -9,10 +9,7 @@
     </app-card>
 
     <template #contentFooter>
-      <router-link
-        class="Button Button--primary Button--outlined Button--fullWidth"
-        to="/"
-      >
+      <router-link class="Button Button--primary Button--fullWidth" to="/">
         Kembali ke Beranda
       </router-link>
     </template>

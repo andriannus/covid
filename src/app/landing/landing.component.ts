@@ -9,6 +9,10 @@ import AppTopBar from '@/app/shared/components/top-bar/top-bar.component.vue';
 export default defineComponent({
   name: 'Landing',
 
+  metaInfo: {
+    title: 'Beranda',
+  },
+
   components: {
     AppBottomBar,
     AppCard,
