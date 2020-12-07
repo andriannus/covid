@@ -3,7 +3,7 @@
     <app-card>
       <h1 class="FontSize-large FontWeight-medium">Tentang aplikasi ini</h1>
 
-      <div class="MarginTop TextAlign-justify">
+      <div class="MarginTop">
         <p class="FontWeight-semibold">Sumber data</p>
         <span>
           Data berasal dari API yang dikembangkan oleh
@@ -18,7 +18,7 @@
         </span>
       </div>
 
-      <div class="MarginTop TextAlign-justify">
+      <div class="MarginTop">
         <p class="FontWeight-semibold">Icon pada aplikasi</p>
         <span>
           Icon pada aplikasi baik itu berupa PNG atau SVG, berasal dari
