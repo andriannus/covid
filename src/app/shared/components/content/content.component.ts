@@ -12,13 +12,13 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
-    hasToolbar: {
+    hasTopBar: {
       type: Boolean,
       default: true,
     },
     padding: {
       type: String,
-      default: 'base',
+      default: '',
     },
   },
 
@@ -29,7 +29,7 @@ export default defineComponent({
     const contentClassNames = computed(() => {
       return [
         {
-          'Content--hasToolbar': props.hasToolbar,
+          'Content--hasTopBar': props.hasTopBar,
         },
         !!props.className && props.className,
         'Content Flex Flex-column JustifyContent-spaceBetween',
@@ -40,6 +40,12 @@ export default defineComponent({
       return [
         {
           [`Padding-${props.padding}`]: !!props.padding,
+        },
+        {
+          'PaddingTop-base': !props.padding,
+        },
+        {
+          'PaddingBottom-base': !props.padding,
         },
         'Content-body',
       ];
