@@ -1,11 +1,12 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
 
+import generalRoutes from '@/app/general/general.routes';
 import landingRoutes from '@/app/landing/landing.routes';
 
 Vue.use(VueRouter);
 
-const routes: RouteConfig[] = [...landingRoutes];
+const routes: RouteConfig[] = [...landingRoutes, ...generalRoutes];
 
 const router = new VueRouter({
   mode: 'history',
