@@ -1,5 +1,5 @@
 <template>
-  <div class="Card">
+  <div :class="cardClassNames">
     <div v-if="hasCardHeader" class="Card-header">
       <slot name="cardHeader"></slot>
     </div>
