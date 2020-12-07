@@ -1,0 +1,22 @@
+.TopBar {
+  justify-content: center;
+
+  &-logo {
+    height: 3.25rem;
+    padding: 0.5rem;
+
+    svg {
+      height: 2.25rem;
+      width: 2.25rem;
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-grow: 1;
+    height: inherit;
+    justify-content: space-between;
+    max-width: 480px;
+    width: 480px;
+  }
+}
