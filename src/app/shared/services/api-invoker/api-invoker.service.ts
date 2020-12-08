@@ -9,9 +9,9 @@ import { ApiInvoker, ApiInvokerState } from './api-invoker.model';
 
 import { API } from '@/app/shared/constants/api.constant';
 
-export function useApiInvoker({ baseUrl, headers }: ApiInvoker) {
+export function useApiInvoker({ baseUrl = '', headers = {} }: ApiInvoker) {
   const state = reactive<ApiInvokerState>({
-    cancelSource: {} as CancelTokenSource,
+    cancelSource: null,
   });
 
   const apiInvoker = axios.create({
