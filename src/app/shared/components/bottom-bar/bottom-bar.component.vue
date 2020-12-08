@@ -4,14 +4,14 @@
       <li class="BottomBar-menuItem">
         <router-link class="Flex-column" to="/">
           <app-icon icon="home" size="lg"></app-icon>
-          <span>Home</span>
+          <span>Beranda</span>
         </router-link>
       </li>
 
       <li class="BottomBar-menuItem">
         <router-link class="Flex-column" to="/about">
           <app-icon icon="info-circle" size="lg"></app-icon>
-          <span>About</span>
+          <span>Tentang</span>
         </router-link>
       </li>
     </ul>
