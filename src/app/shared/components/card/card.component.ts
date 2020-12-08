@@ -8,6 +8,10 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
+    className: {
+      type: String,
+      default: '',
+    },
     radiusless: {
       type: Boolean,
       default: false,
@@ -26,6 +30,7 @@ export default defineComponent({
         {
           'Card--radiusless': props.radiusless,
         },
+        !!props.className && props.className,
         'Card',
       ];
     });
