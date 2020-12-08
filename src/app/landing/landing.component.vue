@@ -12,7 +12,11 @@
           </app-card>
         </template>
 
-        <app-card :borderless="true" :radiusless="true">
+        <app-card
+          :borderless="true"
+          class-name="MarginBottom"
+          :radiusless="true"
+        >
           <h2 class="FontWeight-medium FontSize-xlarge MarginBottom">
             Indonesia
           </h2>
@@ -22,7 +26,9 @@
               <small>Total Kasus</small>
             </p>
 
-            <span class="FontSize-xlarge FontWeight-semibold">100.000</span>
+            <span class="FontSize-xlarge FontWeight-semibold">
+              {{ confirmed }}
+            </span>
           </div>
 
           <div class="MarginBottom">
@@ -30,7 +36,9 @@
               <small>Sembuh</small>
             </p>
 
-            <span class="FontSize-xlarge FontWeight-semibold">100.000</span>
+            <span class="FontSize-xlarge FontWeight-semibold">
+              {{ recovered }}
+            </span>
           </div>
 
           <div>
@@ -38,8 +46,18 @@
               <small>Meninggal</small>
             </p>
 
-            <span class="FontSize-xlarge FontWeight-semibold">100.000</span>
+            <span class="FontSize-xlarge FontWeight-semibold">
+              {{ deaths }}
+            </span>
           </div>
+        </app-card>
+
+        <app-card :borderless="true" :radiusless="true">
+          <h3 class="FontWeight-medium FontSize-large MarginBottom">
+            Terakhir diperbarui
+          </h3>
+
+          <span>{{ lastUpdate }}</span>
         </app-card>
       </app-content>
     </app-page>
