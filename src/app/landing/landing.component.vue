@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <app-loader :is-loading="state.isLoading">
     <app-top-bar></app-top-bar>
 
     <app-page>
@@ -63,7 +63,7 @@
     </app-page>
 
     <app-bottom-bar></app-bottom-bar>
-  </div>
+  </app-loader>
 </template>
 
 <script lang="ts" src="./landing.component.ts"></script>

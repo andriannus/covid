@@ -10,6 +10,7 @@ import { FetchCountriesResponse, LandingState } from './landing.model';
 import AppBottomBar from '@/app/shared/components/bottom-bar/bottom-bar.component.vue';
 import AppCard from '@/app/shared/components/card/card.component.vue';
 import AppContent from '@/app/shared/components/content/content.component.vue';
+import AppLoader from '@/app/shared/components/loader/loader.component.vue';
 import AppPage from '@/app/shared/components/page/page.component.vue';
 import AppTopBar from '@/app/shared/components/top-bar/top-bar.component.vue';
 import { useApiInvoker } from '@/app/shared/services/api-invoker';
@@ -30,6 +31,7 @@ export default defineComponent({
     AppBottomBar,
     AppCard,
     AppContent,
+    AppLoader,
     AppPage,
     AppTopBar,
   },
@@ -40,6 +42,7 @@ export default defineComponent({
     const state = reactive<LandingState>({
       confirmed: 0,
       deaths: 0,
+      isLoading: false,
       lastUpdate: '',
       recovered: 0,
     });
@@ -55,7 +58,9 @@ export default defineComponent({
       fetchCovidData();
     });
 
-    const fetchCovidData = async () => {
+    const fetchCovidData = async (): Promise<void> => {
+      state.isLoading = true;
+
       try {
         const { data: Data } = await apiInvoker.get<FetchCountriesResponse>(
           '/countries/ID',
@@ -67,9 +72,17 @@ export default defineComponent({
         state.recovered = Data.recovered.value;
       } catch {
         // To be continue;
+      } finally {
+        state.isLoading = false;
       }
     };
 
-    return { confirmed, deaths, lastUpdate, recovered };
+    return {
+      confirmed,
+      deaths,
+      lastUpdate,
+      recovered,
+      state,
+    };
   },
 });

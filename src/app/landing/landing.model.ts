@@ -8,6 +8,7 @@ export interface FetchCountriesResponse {
 export interface LandingState {
   confirmed: number;
   deaths: number;
+  isLoading: boolean;
   lastUpdate: string;
   recovered: number;
 }
