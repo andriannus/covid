@@ -8,4 +8,11 @@ export default defineComponent({
   components: {
     VirusLogo,
   },
+
+  props: {
+    isLoading: {
+      type: Boolean,
+      default: true,
+    },
+  },
 });

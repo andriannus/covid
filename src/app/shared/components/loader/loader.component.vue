@@ -1,8 +1,10 @@
 <template>
   <div>
-    <div class="Loader">
+    <div v-if="isLoading" class="Loader">
       <virus-logo class="Loader-logo"></virus-logo>
     </div>
+
+    <slot v-else></slot>
   </div>
 </template>
 
