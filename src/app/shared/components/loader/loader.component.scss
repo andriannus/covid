@@ -1,0 +1,31 @@
+.Loader {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+
+  &-logo {
+    animation: Blink 2s linear infinite;
+    height: 3rem;
+    width: auto;
+  }
+}
+
+@keyframes Blink {
+  25% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.75;
+  }
+
+  75% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
