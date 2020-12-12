@@ -1,16 +1,18 @@
 <template>
   <app-loader :is-loading="state.isLoading">
-    <app-top-bar></app-top-bar>
+    <div class="Landing">
+      <app-top-bar></app-top-bar>
 
-    <app-page>
-      <app-content>
-        <template #contentHeader>
-          <app-card :borderless="true" :radiusless="true">
-            <div class="TextAlign-center">
-              <h1 class="FontSize-2xlarge">Virus Corona (COVID-19)</h1>
-            </div>
-          </app-card>
-        </template>
+      <app-page>
+        <app-card
+          :borderless="true"
+          class-name="MarginBottom"
+          :radiusless="true"
+        >
+          <div class="TextAlign-center">
+            <h1 class="FontSize-2xlarge">Virus Corona (COVID-19)</h1>
+          </div>
+        </app-card>
 
         <app-card
           :borderless="true"
@@ -52,17 +54,21 @@
           </div>
         </app-card>
 
-        <app-card :borderless="true" :radiusless="true">
+        <app-card
+          :borderless="true"
+          class-name="MarginBottom"
+          :radiusless="true"
+        >
           <h3 class="FontWeight-medium FontSize-large MarginBottom">
             Terakhir diperbarui
           </h3>
 
           <span>{{ lastUpdate }}</span>
         </app-card>
-      </app-content>
-    </app-page>
+      </app-page>
 
-    <app-bottom-bar></app-bottom-bar>
+      <app-bottom-bar></app-bottom-bar>
+    </div>
   </app-loader>
 </template>
 
