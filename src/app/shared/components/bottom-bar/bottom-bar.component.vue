@@ -1,7 +1,7 @@
 <template>
   <div class="BottomBar">
     <ul class="BottomBar-menu">
-      <li class="BottomBar-menuItem">
+      <li class="BottomBar-menuItem is-active">
         <router-link class="Flex-column" to="/">
           <app-icon icon="home" size="lg"></app-icon>
           <span>Beranda</span>
