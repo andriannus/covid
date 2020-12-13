@@ -10,6 +10,11 @@ module.exports = {
   },
 
   chainWebpack: config => {
+    config.plugin('html').tap(options => {
+      options[0].title = 'COVID19';
+      return options;
+    });
+
     const svgRule = config.module.rule('svg');
 
     svgRule.uses.clear();
