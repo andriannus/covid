@@ -8,13 +8,13 @@ import {
 import { CLIP_CLASS } from './dialog.constant';
 import { DialogState } from './dialog.model';
 
-import AppFade from '@/app/shared/components/fade/fade.component.vue';
+import AppFadeTransition from '@/app/shared/components/fade/fade.component.vue';
 
 export default defineComponent({
   name: 'Dialog',
 
   components: {
-    AppFade,
+    AppFadeTransition,
   },
 
   props: {

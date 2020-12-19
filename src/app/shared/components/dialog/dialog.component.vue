@@ -1,5 +1,5 @@
 <template>
-  <app-fade>
+  <app-fade-transition>
     <div v-if="value" class="Dialog">
       <div class="Dialog-backdrop"></div>
 
@@ -9,7 +9,7 @@
         </div>
       </div>
     </div>
-  </app-fade>
+  </app-fade-transition>
 </template>
 
 <script lang="ts" src="./dialog.component.ts"></script>
