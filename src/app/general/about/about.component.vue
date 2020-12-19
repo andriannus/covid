@@ -43,4 +43,3 @@
 </template>
 
 <script lang="ts" src="./about.component.ts"></script>
-<style lang="scss" scoped src="./about.component.scss"></style>

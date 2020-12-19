@@ -5,4 +5,3 @@
 </template>
 
 <script lang="ts" src="./general.component.ts"></script>
-<style lang="scss" scoped src="./general.component.scss"></style>
