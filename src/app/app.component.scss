@@ -1,5 +1,9 @@
 @import '@amar-ui-web/core';
 
+.Dialog--clipped {
+  overflow: hidden;
+}
+
 .TextAlign {
   &-center {
     text-align: center;
