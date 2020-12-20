@@ -10,4 +10,19 @@ export const en = {
     recovered: 'Recovered',
     title: 'Coronavirus (COVID-19)',
   },
+  buttonLanguage: {
+    close: 'Close',
+  },
+  about: {
+    title: 'About this application',
+    source: {
+      title: 'Data source',
+      description: 'The data comes from the API developed by',
+    },
+    icon: {
+      title: 'Icons on the application',
+      description: 'Icons in the application, either PNG or SVG, come from',
+    },
+    button: 'Home',
+  },
 };
