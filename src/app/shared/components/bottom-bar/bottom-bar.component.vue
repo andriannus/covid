@@ -4,14 +4,14 @@
       <li class="BottomBar-menuItem is-active">
         <router-link class="Flex-column" to="/">
           <app-icon icon="home" size="lg"></app-icon>
-          <span>Beranda</span>
+          <span>{{ t('menus.home') }}</span>
         </router-link>
       </li>
 
       <li class="BottomBar-menuItem">
         <router-link class="Flex-column" to="/about">
           <app-icon icon="info-circle" size="lg"></app-icon>
-          <span>Tentang</span>
+          <span>{{ t('menus.about') }}</span>
         </router-link>
       </li>
     </ul>

@@ -4,6 +4,7 @@ import {
   onMounted,
   reactive,
 } from '@vue/composition-api';
+import { useI18n } from 'vue-i18n-composable';
 
 import { FetchCountriesResponse, LandingState } from './landing.model';
 
@@ -83,6 +84,7 @@ export default defineComponent({
       lastUpdate,
       recovered,
       state,
+      ...useI18n(),
     };
   },
 });

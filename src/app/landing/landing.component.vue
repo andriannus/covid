@@ -10,7 +10,7 @@
           :radiusless="true"
         >
           <div class="TextAlign-center">
-            <h1 class="FontSize-2xlarge">Virus Corona (COVID-19)</h1>
+            <h1 class="FontSize-2xlarge">{{ t('landing.title') }}</h1>
           </div>
         </app-card>
 
@@ -25,7 +25,7 @@
 
           <div class="MarginBottom">
             <p>
-              <small>Total Kasus</small>
+              <small>{{ t('landing.confirmed') }}</small>
             </p>
 
             <span class="FontSize-xlarge FontWeight-semibold">
@@ -35,7 +35,7 @@
 
           <div class="MarginBottom">
             <p>
-              <small>Sembuh</small>
+              <small>{{ t('landing.recovered') }}</small>
             </p>
 
             <span class="FontSize-xlarge FontWeight-semibold">
@@ -45,7 +45,7 @@
 
           <div>
             <p>
-              <small>Meninggal</small>
+              <small>{{ t('landing.deaths') }}</small>
             </p>
 
             <span class="FontSize-xlarge FontWeight-semibold">
@@ -60,7 +60,7 @@
           :radiusless="true"
         >
           <h3 class="FontWeight-medium FontSize-large MarginBottom">
-            Terakhir diperbarui
+            {{ t('landing.lastUpdate') }}
           </h3>
 
           <span>{{ lastUpdate }}</span>
