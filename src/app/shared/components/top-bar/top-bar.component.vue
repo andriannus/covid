@@ -4,6 +4,12 @@
       <router-link class="TopBar-logo" to="/">
         <covid-logo></covid-logo>
       </router-link>
+
+      <div class="TopBar-actions">
+        <div class="TopBar-action">
+          <app-button-language></app-button-language>
+        </div>
+      </div>
     </div>
   </div>
 </template>
