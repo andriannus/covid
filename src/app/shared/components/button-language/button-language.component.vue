@@ -4,7 +4,7 @@
       class="ButtonLanguage Button Button--primary Button--outlined Button--small Transform-uppercase"
       @click="toggleDialog"
     >
-      {{ state.i18n.locale }}
+      {{ locale }}
     </button>
 
     <app-dialog v-model="state.isDialogShown">
@@ -26,7 +26,7 @@
         class="Button Button--primary Button--fullWidth"
         @click="toggleDialog"
       >
-        Done
+        {{ t('buttonLanguage.close') }}
       </button>
     </app-dialog>
   </div>

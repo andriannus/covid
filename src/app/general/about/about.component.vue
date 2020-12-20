@@ -1,12 +1,15 @@
 <template>
   <app-content :has-top-bar="false" padding="base">
     <app-card>
-      <h1 class="FontSize-large FontWeight-medium">Tentang aplikasi ini</h1>
+      <h1 class="FontSize-large FontWeight-medium">
+        {{ t('about.title') }}
+      </h1>
 
       <div class="MarginTop">
-        <p class="FontWeight-semibold">Sumber data</p>
+        <p class="FontWeight-semibold">{{ t('about.source.title') }}</p>
+
         <span>
-          Data berasal dari API yang dikembangkan oleh
+          {{ t('about.source.description') }}
 
           <a
             href="http://https://github.com/mathdroid/covid-19-api"
@@ -19,9 +22,9 @@
       </div>
 
       <div class="MarginTop">
-        <p class="FontWeight-semibold">Icon pada aplikasi</p>
+        <p class="FontWeight-semibold">{{ t('about.icon.title') }}</p>
         <span>
-          Icon pada aplikasi baik itu berupa PNG atau SVG, berasal dari
+          {{ t('about.icon.description') }}
 
           <a
             href="https://www.flaticon.com"
@@ -36,7 +39,7 @@
 
     <template #contentFooter>
       <router-link class="Button Button--primary Button--fullWidth" to="/">
-        Beranda
+        {{ t('about.button') }}
       </router-link>
     </template>
   </app-content>

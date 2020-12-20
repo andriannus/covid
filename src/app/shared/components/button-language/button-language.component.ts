@@ -29,6 +29,7 @@ export default defineComponent({
       setLocale,
       state,
       toggleDialog,
+      ...useI18n(),
     };
   },
 });
