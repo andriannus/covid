@@ -10,14 +10,14 @@
     <app-dialog v-model="state.isDialogShown">
       <button
         class="Button Button--primary Button--outlined Button--fullWidth MarginBottom"
-        @click="setLocale('id')"
+        @click="changeLanguage(Locale.BahasaIndonesia)"
       >
         Bahasa Indonesia
       </button>
 
       <button
         class="Button Button--primary Button--outlined Button--fullWidth MarginBottom"
-        @click="setLocale('en')"
+        @click="changeLanguage(Locale.English)"
       >
         English
       </button>
