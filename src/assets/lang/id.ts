@@ -4,11 +4,11 @@ export const id = {
     about: 'Tentang',
   },
   landing: {
-    confirmed: 'Total Kasus',
+    confirmed: 'Total kasus',
     deaths: 'Meninggal',
     lastUpdate: 'Terakhir diperbarui',
     recovered: 'Sembuh',
-    title: 'Virus Corona (COVID-19)',
+    title: 'Virus corona (COVID-19)',
   },
   buttonLanguage: {
     close: 'Tutup',

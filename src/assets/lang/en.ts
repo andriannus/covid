@@ -21,7 +21,7 @@ export const en = {
     },
     icon: {
       title: 'Icons on the application',
-      description: 'Icons in the application, either PNG or SVG, come from',
+      description: 'Icons on the application, either PNG or SVG, come from',
     },
     button: 'Home',
   },
