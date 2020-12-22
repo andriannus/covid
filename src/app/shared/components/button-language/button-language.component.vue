@@ -9,21 +9,23 @@
 
     <app-dialog v-model="state.isDialogShown">
       <button
-        class="Button Button--primary Button--outlined Button--fullWidth MarginBottom"
+        :class="{ 'Button--outlined': locale !== Locale.BahasaIndonesia }"
+        class="Button Button--primary Button--fullWidth MarginBottom"
         @click="changeLanguage(Locale.BahasaIndonesia)"
       >
-        Bahasa Indonesia
+        Bahasa Indonesia (ID)
       </button>
 
       <button
-        class="Button Button--primary Button--outlined Button--fullWidth MarginBottom"
+        :class="{ 'Button--outlined': locale !== Locale.English }"
+        class="Button Button--primary Button--fullWidth MarginBottom"
         @click="changeLanguage(Locale.English)"
       >
-        English
+        English (EN)
       </button>
 
       <button
-        class="Button Button--primary Button--fullWidth"
+        class="Button Button--dark Button--fullWidth Button--small"
         @click="toggleDialog"
       >
         {{ t('buttonLanguage.close') }}
