@@ -21,7 +21,7 @@ module.exports = {
     appleMobileWebAppStatusBarStyle: 'black',
   },
 
-  chainWebpack(config) {
+  chainWebpack: config => {
     config.plugin('html').tap(options => {
       options[0].title = 'COVID19';
       return options;
