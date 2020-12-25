@@ -2,10 +2,11 @@ import Vue from 'vue';
 
 import App from '@/app/app.component.vue';
 import router from '@/app/app.routes';
-import { i18n } from '@/plugins/vue-i18n.plugin';
 
 import '@/plugins';
 import '@/register-service-worker';
+
+import { i18n } from '@/plugins/vue-i18n.plugin';
 
 Vue.config.productionTip = false;
 
