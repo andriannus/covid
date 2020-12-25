@@ -1,7 +1,7 @@
 <template>
   <div class="TopBar">
     <div class="TopBar-wrapper">
-      <router-link class="TopBar-logo" to="/">
+      <router-link aria-label="COVID" class="TopBar-logo" to="/">
         <covid-logo></covid-logo>
       </router-link>
 
