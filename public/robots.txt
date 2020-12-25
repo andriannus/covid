@@ -1,2 +1,3 @@
 User-agent: *
 Disallow:
+Sitemap: https://covid.andriannus.id/sitemap.xml
