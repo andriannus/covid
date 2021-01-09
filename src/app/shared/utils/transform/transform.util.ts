@@ -12,9 +12,9 @@ export function numberSeparator(amount: number | string): string {
     return '0';
   }
 
-  const validAmount = isString ? Number(amount) : amount;
+  const validAmount = isString ? Number(amount) : (amount as number);
 
-  return `${validAmount.toLocaleString('id-ID')}`;
+  return isNaN(validAmount) ? '0' : `${validAmount.toLocaleString('id-ID')}`;
 }
 
 export function formatDate(
