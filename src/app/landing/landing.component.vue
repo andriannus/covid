@@ -67,6 +67,20 @@
         </app-card>
       </app-page>
 
+      <app-dialog v-model="state.didSomethingWrong">
+        <div class="TextAlign-center">
+          <p class="FontSize-large MarginBottom">Something wrong.</p>
+
+          <button
+            class="Button Button--primary Button--rounded"
+            type="button"
+            @click="fetchCovidData"
+          >
+            Refresh
+          </button>
+        </div>
+      </app-dialog>
+
       <app-bottom-bar></app-bottom-bar>
     </div>
   </app-loader>

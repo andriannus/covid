@@ -11,6 +11,7 @@ import { FetchCountriesResponse, LandingState } from './landing.model';
 import AppBottomBar from '@/app/shared/components/bottom-bar/bottom-bar.component.vue';
 import AppCard from '@/app/shared/components/card/card.component.vue';
 import AppContent from '@/app/shared/components/content/content.component.vue';
+import AppDialog from '@/app/shared/components/dialog/dialog.component.vue';
 import AppLoader from '@/app/shared/components/loader/loader.component.vue';
 import AppPage from '@/app/shared/components/page/page.component.vue';
 import AppTopBar from '@/app/shared/components/top-bar/top-bar.component.vue';
@@ -32,6 +33,7 @@ export default defineComponent({
     AppBottomBar,
     AppCard,
     AppContent,
+    AppDialog,
     AppLoader,
     AppPage,
     AppTopBar,
@@ -43,6 +45,7 @@ export default defineComponent({
     const state = reactive<LandingState>({
       confirmed: 0,
       deaths: 0,
+      didSomethingWrong: false,
       isLoading: false,
       lastUpdate: '',
       recovered: 0,
@@ -72,7 +75,7 @@ export default defineComponent({
         state.lastUpdate = Data.lastUpdate;
         state.recovered = Data.recovered.value;
       } catch {
-        // To be continue;
+        state.didSomethingWrong = true;
       } finally {
         state.isLoading = false;
       }
@@ -81,6 +84,7 @@ export default defineComponent({
     return {
       confirmed,
       deaths,
+      fetchCovidData,
       lastUpdate,
       recovered,
       state,
