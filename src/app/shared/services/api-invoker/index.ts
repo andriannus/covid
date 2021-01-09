@@ -1,2 +1,2 @@
-export { ApiInvoker, ApiInvokerState } from './api-invoker.model';
-export { useApiInvoker } from './api-invoker.service';
+export * from './api-invoker.model';
+export * from './api-invoker.service';
