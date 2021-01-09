@@ -1,15 +1,18 @@
 import { reactive } from '@vue/composition-api';
-import axios, {
-  AxiosRequestConfig,
-  AxiosResponse,
-  CancelTokenSource,
-} from 'axios';
+import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 
-import { ApiInvoker, ApiInvokerState } from './api-invoker.model';
+import {
+  ApiInvokerConfig,
+  ApiInvokerService,
+  ApiInvokerState,
+} from './api-invoker.model';
 
 import { API } from '@/app/shared/constants/api.constant';
 
-export function useApiInvoker({ baseUrl = '', headers = {} }: ApiInvoker) {
+export function useApiInvoker({
+  baseUrl = '',
+  headers = {},
+}: ApiInvokerConfig): ApiInvokerService {
   const state = reactive<ApiInvokerState>({
     cancelSource: null,
   });
@@ -20,40 +23,40 @@ export function useApiInvoker({ baseUrl = '', headers = {} }: ApiInvoker) {
     ...headers,
   });
 
-  const createCancelToken = (config: AxiosRequestConfig) => {
-    const { CancelToken } = axios;
-    const source = CancelToken.source();
-    state.cancelSource = source;
-
-    config.cancelToken = source.token;
-  };
-
-  const cancelRequest = () => {
-    if (state.cancelSource) {
-      return state.cancelSource.cancel();
-    }
-  };
-
-  const interceptRequest = (config: AxiosRequestConfig) => {
-    cancelRequest();
-    createCancelToken(config);
-
-    return config;
-  };
-
-  const interceptSuccessResponse = (res: AxiosResponse) => {
-    return res;
-  };
-
-  const interceptErrorResponse = (err: any) => {
-    return Promise.reject(err);
-  };
-
   apiInvoker.interceptors.request.use(interceptRequest);
   apiInvoker.interceptors.response.use(
     interceptSuccessResponse,
     interceptErrorResponse,
   );
+
+  function createCancelToken(config: AxiosRequestConfig): void {
+    const { CancelToken } = axios;
+    const source = CancelToken.source();
+    state.cancelSource = source;
+
+    config.cancelToken = source.token;
+  }
+
+  function cancelRequest(): void {
+    if (state.cancelSource) {
+      return state.cancelSource.cancel();
+    }
+  }
+
+  function interceptRequest(config: AxiosRequestConfig): AxiosRequestConfig {
+    cancelRequest();
+    createCancelToken(config);
+
+    return config;
+  }
+
+  function interceptSuccessResponse(res: AxiosResponse): AxiosResponse {
+    return res;
+  }
+
+  function interceptErrorResponse(err: any): Promise<never> {
+    return Promise.reject(err);
+  }
 
   return { apiInvoker };
 }

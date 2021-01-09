@@ -8,20 +8,20 @@ export default defineComponent({
   setup() {
     const body = document.querySelector('body');
 
-    onMounted(() => {
+    onMounted((): void => {
       addBackgroundColor();
     });
 
-    onUnmounted(() => {
+    onUnmounted((): void => {
       removeBackgroundColor();
     });
 
-    const addBackgroundColor = () => {
+    function addBackgroundColor(): void {
       body?.classList.add(BG_COLOR_CLASS);
-    };
+    }
 
-    const removeBackgroundColor = () => {
+    function removeBackgroundColor(): void {
       body?.classList.remove(BG_COLOR_CLASS);
-    };
+    }
   },
 });

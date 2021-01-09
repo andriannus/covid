@@ -58,11 +58,11 @@ export default defineComponent({
     );
     const recovered = computed(() => numberSeparator(state.recovered));
 
-    onMounted(() => {
+    onMounted((): void => {
       fetchCovidData();
     });
 
-    const fetchCovidData = async (): Promise<void> => {
+    async function fetchCovidData(): Promise<void> {
       state.isLoading = true;
 
       try {
@@ -79,7 +79,7 @@ export default defineComponent({
       } finally {
         state.isLoading = false;
       }
-    };
+    }
 
     return {
       confirmed,

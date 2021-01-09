@@ -19,18 +19,18 @@ export default defineComponent({
       i18n: useI18n(),
     });
 
-    const toggleDialog = () => {
+    function toggleDialog(): void {
       state.isDialogShown = !state.isDialogShown;
-    };
+    }
 
-    const setLocale = (locale: Locale) => {
+    function setLocale(locale: Locale): void {
       state.i18n.locale = locale;
-    };
+    }
 
-    const changeLanguage = (locale: Locale) => {
+    function changeLanguage(locale: Locale): void {
       setLocale(locale);
       toggleDialog();
-    };
+    }
 
     return {
       changeLanguage,

@@ -29,7 +29,7 @@ export default defineComponent({
       html: document.querySelector('html'),
     });
 
-    onUnmounted(() => {
+    onUnmounted((): void => {
       removeClipClass();
     });
 
@@ -44,20 +44,20 @@ export default defineComponent({
       },
     );
 
-    const hasClipClass = () => {
-      return state.html?.classList.contains(CLIP_CLASS);
-    };
+    function hasClipClass(): boolean {
+      return !!state.html?.classList.contains(CLIP_CLASS);
+    }
 
-    const addClipClass = () => {
+    function addClipClass(): void {
       if (!hasClipClass()) {
         state.html?.classList.add(CLIP_CLASS);
       }
-    };
+    }
 
-    const removeClipClass = () => {
+    function removeClipClass(): void {
       if (hasClipClass()) {
         state.html?.classList.remove(CLIP_CLASS);
       }
-    };
+    }
   },
 });
