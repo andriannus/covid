@@ -9,7 +9,11 @@
     </app-card>
 
     <template #contentFooter>
-      <router-link class="Button Button--primary Button--fullWidth" to="/">
+      <router-link
+        id="BtnBackToLanding"
+        class="Button Button--primary Button--fullWidth"
+        to="/"
+      >
         Kembali ke Beranda
       </router-link>
     </template>
