@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/andriannus/covid/compare/v0.1.1...v0.1.2) (2021-01-10)
+
+
+### Bug Fixes
+
+* handle return NaN ([2551a96](https://github.com/andriannus/covid/commit/2551a963efa97cd79067438804497107c65bc8ec))
+
+
+### Others
+
+* remove unused file ([54b267a](https://github.com/andriannus/covid/commit/54b267ad22f0b6a8d3a2d35581c2c4ce2626be2a))
+* update license ([bc3ad81](https://github.com/andriannus/covid/commit/bc3ad81aeba7923a80d7b93cffc2f86e59013cf7))
+
+
+### Tests
+
+* create unit test for transform util ([82eb6e7](https://github.com/andriannus/covid/commit/82eb6e74a2e7ca1948d4d50f44cddcd3de89e166))
+
 ### 0.1.1 (2021-01-09)
 
 
